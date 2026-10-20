@@ -11,7 +11,9 @@
 
 ## 在线体验
 
-如果将 `public/` 部署到静态网页，两个交互都可以用内置的离线示例体验；要获得实时模型生成，则需运行 Node 服务并配置模型接口。静态示例是用来演示交互的确定性占位输出，不代表大模型效果。当前仓库尚未发布在线站点。
+`docs/` 目录可直接用于 GitHub Pages。静态网页中两个交互使用内置的离线示例；要获得实时模型生成，则需运行 Node 服务并配置模型接口。静态示例是用来演示交互的确定性占位输出，不代表大模型效果。
+
+启用方式：仓库 **Settings → Pages → Build and deployment**，选择 **Deploy from a branch**，Branch 设为 `main`，目录选 `/docs`，点击 **Save**。部署完成后，GitHub 会显示站点地址。
 
 ## 本地运行
 
@@ -21,7 +23,7 @@
 npm run dev
 ```
 
-打开 `http://localhost:5196`。不设置 API Key 时，服务端会返回离线示例；也可以直接静态托管 `public/` 目录体验离线交互。
+打开 `http://localhost:5196`。不设置 API Key 时，服务端会返回离线示例；GitHub Pages 从 `main` 分支的 `/docs` 目录部署静态体验版。
 
 ## 接入 OpenAI 兼容接口
 
@@ -73,7 +75,7 @@ PORT=5196
 
 ```text
 ai-builder-demos/
-├── public/
+├── docs/
 │   ├── index.html       # 两个作品入口和界面
 │   ├── styles.css       # 响应式样式
 │   └── app.js           # 会话流程、离线演示、输出呈现

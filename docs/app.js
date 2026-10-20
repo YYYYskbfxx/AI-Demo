@@ -95,7 +95,7 @@ async function submitMind(event) {
   $('#mind-input').disabled = true;
   try {
     const currentStep = mindStep;
-    const data = await postJSON('/api/mindmirror', { step: currentStep, input, history: mindHistory.slice(0, -1) }, () => localMindReply(currentStep, input));
+    const data = await postJSON('api/mindmirror', { step: currentStep, input, history: mindHistory.slice(0, -1) }, () => localMindReply(currentStep, input));
     $('#mode-label').textContent = data.mode === 'live' ? 'AI 模型已连接' : data.mode === 'safety' ? '安全提示已触发' : data.mode === 'static' ? '静态离线演示' : '离线体验模式';
     mindHistory.push({ role: 'assistant', content: data.content });
     addMessage('assistant', data.content);
@@ -141,7 +141,7 @@ async function analyzeResearch() {
   $('#research-output').className = 'output-body';
   $('#research-output').innerHTML = '<div class="result-markdown">正在识别原文线索、区分观察与推断…</div>';
   try {
-    const data = await postJSON('/api/research', { input }, () => localResearchReply(input));
+    const data = await postJSON('api/research', { input }, () => localResearchReply(input));
     lastResearchOutput = data.content;
     $('#research-output').innerHTML = `<div class="result-markdown">${renderMarkdown(data.content)}</div>`;
     $('#output-state').className = 'output-state ready';
