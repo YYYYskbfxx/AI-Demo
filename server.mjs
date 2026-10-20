@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), 'docs');
 const port = Number(process.env.PORT || 5196);
+const host = process.env.HOST || '127.0.0.1';
 const mime = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml' };
 
 function loadEnv() {
@@ -99,4 +100,4 @@ http.createServer(async (req, res) => {
     const data = await readFile(path.join(root, 'index.html'));
     res.writeHead(200, { 'content-type': mime['.html'] }); res.end(data);
   }
-}).listen(port, '127.0.0.1', () => console.log(`AI Builder demos ready at http://127.0.0.1:${port}`));
+}).listen(port, host, () => console.log(`AI Builder demos ready at http://${host}:${port}`));
