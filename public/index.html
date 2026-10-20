@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f7f3" />
+  <meta name="description" content="两个面向真实工作流的 AI 产品原型：心境与访研搭档。" />
+  <title>AI Builder Studio · 尹伊霄</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#mindmirror" aria-label="AI Builder Studio 首页">
+        <span class="brand-mark">a<span>i</span></span>
+        <span class="brand-name">builder studio<small>PRODUCT PROTOTYPES</small></span>
+      </a>
+      <div class="side-label">我的作品</div>
+      <button class="project-link active" data-view="mindmirror"><span class="project-icon lilac">✳</span><span>心境<small>使用反思练习</small></span><span class="link-arrow">↗</span></button>
+      <button class="project-link" data-view="research"><span class="project-icon peach">⌕</span><span>访研搭档<small>访谈证据整理</small></span><span class="link-arrow">↗</span></button>
+      <div class="side-bottom">
+        <div class="profile"><div class="avatar">尹</div><div>尹伊霄<small>AI 产品原型作品集</small></div><span class="dots">•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar"><div class="breadcrumb">作品集 <span>/</span> <b id="crumb-title">心境</b></div><div class="top-actions"><span class="availability"><i></i><span id="mode-label">离线体验模式</span></span><button class="top-button" id="reset-button" title="重置当前体验">↻ <span>重新开始</span></button></div></header>
+
+      <section class="view active" id="mindmirror-view">
+        <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-mark">✳</span> AI REFLECTION COMPANION</div><h1>给情绪一点空间，<em>再做选择。</em></h1><p>把“限制使用”换成一次温和的自我观察。没有标准答案，只从此刻真实发生的事开始。</p></div><div class="privacy-pill"><span>◈</span> 默认离线；接入模型后发送至所配置接口</div></div>
+        <div class="mind-layout">
+          <aside class="journey-card">
+            <div class="journey-top"><span class="label-overline">本次练习</span><span class="step-count" id="step-count">01 <i>/ 04</i></span></div>
+            <h2>从觉察开始</h2><p class="journey-intro">用几分钟梳理一次刷手机的时刻，看看自己真正需要什么。</p>
+            <div class="progress-track"><span id="progress-bar"></span></div>
+            <div class="step-list" id="step-list">
+              <div class="step-item current"><span class="step-dot">1</span><div>回顾情境<small>发生了什么？</small></div><span class="step-check"></span></div>
+              <div class="step-item"><span class="step-dot">2</span><div>识别想法<small>脑中闪过什么？</small></div><span class="step-check"></span></div>
+              <div class="step-item"><span class="step-dot">3</span><div>换个角度<small>还有别的可能吗？</small></div><span class="step-check"></span></div>
+              <div class="step-item"><span class="step-dot">4</span><div>尝试行动<small>下一步可以做什么？</small></div><span class="step-check"></span></div>
+            </div>
+            <div class="gentle-note"><span>✦</span><p>如果暂时不想继续，停在这里也可以。<br/>练习由你决定节奏。</p></div>
+            <div class="case-tag"><span class="case-spark">✳</span><div><b>演示情境</b><small>虚构案例 · 可输入自己的情况</small></div></div>
+          </aside>
+
+          <section class="conversation-card" aria-label="心境对话体验">
+            <div class="conversation-head"><div class="assistant-id"><div class="assistant-avatar">✳</div><div><b>心境 <span class="online-dot"></span></b><small>认知行为练习 · 温和陪伴</small></div></div><button class="icon-button" id="clear-chat" title="清空并重新开始">···</button></div>
+            <div class="chat-stream" id="mind-chat" aria-live="polite">
+              <div class="day-divider"><span>今天 · 一次练习</span></div>
+              <div class="message-row assistant-row"><div class="tiny-avatar">✳</div><div class="message-stack"><div class="message assistant-message">你好，我是心境。我们可以一起回看一次你不太想发生、却又重复出现的刷手机时刻。<br/><br/>你愿意从最近的一次开始吗？当时你正在做什么，心情怎么样？</div><span class="message-time">刚刚</span></div></div>
+              <div class="prompt-chips" id="starter-chips"><button>复习时总忍不住刷视频</button><button>睡前一打开就停不下来</button></div>
+            </div>
+            <div class="typing-row" id="typing-row" hidden><span></span><span></span><span></span><small>心境正在整理</small></div>
+            <form class="composer" id="mind-form"><textarea id="mind-input" rows="1" maxlength="900" placeholder="写下你此刻想到的内容…" aria-label="写下你的想法"></textarea><div class="composer-footer"><span>↵ 发送 · 你的内容不会被保存</span><button class="send-button" type="submit" aria-label="发送">↑</button></div></form>
+            <div class="under-composer">如果练习让你不舒服，可以随时停止。心境不是医疗或心理诊断服务。</div>
+          </section>
+        </div>
+        <div class="bottom-caption"><span>PROJECT 01</span><span>概念重构原型 · 基于既有 MindMirror 项目框架独立实现</span><span>01 / 02</span></div>
+      </section>
+
+      <section class="view" id="research-view">
+        <div class="page-heading research-heading"><div><div class="eyebrow"><span class="eyebrow-mark peach-mark">⌕</span> RESEARCH WORKFLOW COPILOT</div><h1>让每个结论，<em>都找得到来处。</em></h1><p>把访谈记录整理成可回溯的研究线索。引用、推断与待验证假设分开呈现。</p></div><div class="privacy-pill"><span>◈</span> 默认离线；接入模型后发送至所配置接口</div></div>
+        <div class="research-layout">
+          <section class="research-input-card">
+            <div class="card-title-row"><div><span class="label-overline">01 / SOURCE</span><h2>放入访谈片段</h2><p>粘贴去标识化的访谈记录，AI 会按证据边界整理。</p></div><span class="source-icon">▤</span></div>
+            <div class="input-label"><label for="research-input">访谈文本</label><button type="button" id="sample-button" class="text-button">填入示例 ↗</button></div>
+            <textarea id="research-input" class="research-textarea" maxlength="12000" placeholder="例如：&#10;受访者：最近一次需要跨设备传文件是在……&#10;研究者：当时你最希望解决什么？&#10;受访者：……"></textarea>
+            <div class="textarea-meta"><span>建议先删除姓名、联系方式等身份信息</span><span id="char-count">0 / 12000</span></div>
+            <div class="research-options"><div><span class="option-icon">◎</span><span><b>证据优先</b><small>每条发现附原文摘录</small></span></div><div><span class="option-icon">◇</span><span><b>推断标注</b><small>不把假设写成结论</small></span></div></div>
+            <button class="analyze-button" id="analyze-button"><span>✦</span> 整理访谈洞察 <span class="button-arrow">→</span></button>
+            <div class="boundary-note"><span>ⓘ</span> 原型不会把分析结果当作统计结论，也不会替代研究者判断。</div>
+          </section>
+          <section class="research-output-card">
+            <div class="output-head"><div><span class="label-overline">02 / INSIGHTS</span><h2>研究线索</h2></div><span class="output-state" id="output-state"><i></i> 等待材料</span></div>
+            <div class="output-body" id="research-output"><div class="empty-illustration"><div class="empty-sheet"><span class="sheet-line long"></span><span class="sheet-line"></span><span class="sheet-line short"></span><span class="sheet-pin">✦</span></div><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span></div><h3>把一段材料，变成下一步线索</h3><p>分析完成后，关键发现、原文证据、待验证假设和追问建议会显示在这里。</p><div class="empty-tags"><span>关键发现</span><span>证据引用</span><span>后续追问</span></div></div>
+            <div class="output-footer"><span>访研搭档 · 研究辅助原型</span><button id="copy-output" class="copy-button" disabled>复制结果</button></div>
+          </section>
+        </div>
+        <div class="bottom-caption"><span>PROJECT 02</span><span>面向用户研究工作流 · 证据与推断显式分离</span><span>02 / 02</span></div>
+      </section>
+
+      <footer class="site-footer"><span>设计与实现：尹伊霄</span><span>个人作品原型 · 请勿输入敏感个人信息</span></footer>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>

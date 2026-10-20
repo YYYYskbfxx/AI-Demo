@@ -1,0 +1,10 @@
+{
+  "name": "ai-builder-demos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Two product-minded AI demos: MindMirror and Research Copilot",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs"
+  }
+}
