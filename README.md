@@ -6,13 +6,13 @@
 
 [打开三个项目的独立入口](https://YYYYskbfxx.github.io/AI-Demo/)
 
-[心境 MindMirror](docs/mindmirror.html) · [访研搭档 Research Copilot](docs/research.html) · [途序 Tripwise](docs/travel.html)
+[心境 MindMirror](docs/mindmirror-project.html) · [访研搭档 Research Copilot](docs/research.html) · [途序 Tripwise](docs/travel.html)
 
-GitHub Pages 提供三个原型的离线交互体验。心境与访研搭档可在另行配置并部署 Node 服务后调用模型；途序当前为规则驱动的交互原型。
+GitHub Pages 展示三个项目入口。心境的公开页面包含项目介绍和早期离线交互稿；实时 DeepSeek 对话与历史记录需要运行 [`mindmirror/`](mindmirror/) 中的 Node 服务。访研搭档可在另行配置 Node 服务后调用模型；途序当前为规则驱动的交互原型。
 
 ## 1. 心境 MindMirror
 
-[进入心境独立页面](docs/mindmirror.html)
+[查看心境项目介绍](docs/mindmirror-project.html) · [查看 Agent 源码与运行说明](mindmirror/) · [体验早期离线交互稿](docs/mindmirror.html)
 
 ### 项目背景
 
@@ -20,11 +20,11 @@ GitHub Pages 提供三个原型的离线交互体验。心境与访研搭档可�
 
 ### 项目内容
 
-MindMirror 是一款以认知行为疗法（CBT）为基础的对话式智能体，通过日常对话引导用户回顾具体情境、识别自动想法、检查支持与反对证据，并形成更平衡的表达。研究稿介绍了为期 8 天、包含 50 名 18–25 岁参与者的候补名单对照研究，并结合量化评估与访谈了解使用效果和体验。
+心境是基于 CBT 的八天对话式 Agent。第 1 天轻松介绍与确定个人目标，第 2—7 天围绕具体使用情境反思，第 8 天回顾。服务端通过火山方舟调用 DeepSeek，由情境理解、CBT 策略、回复整合三个角色协作，从 `knowledge.json` 选择证据探测、可能性放大镜或视角转换。支持多轮对话、结束或继续当天对话、按日期保存旅程及查看历史。源码位于 [`mindmirror/`](mindmirror/)；API Key 与对话记录不包含在仓库中。
 
 ### 界面设计
 
-页面采用「左侧练习导航 + 右侧对话主界面」布局。左侧呈现练习进度、当前步骤和情境提示；右侧以聊天气泡承载引导问题和用户回应，并提供示例情境快捷入口。对话按情境回顾、想法识别、证据检查和下一步行动逐步展开，让用户每次聚焦一个问题。
+新版 Web 界面以旅程、日期导航和聊天区组织八天流程。发送后消息立即显示在对话区，模型回复期间展示生成状态；历史页按旅程和日期查看记录。移动端采用响应式布局。GitHub Pages 上的旧页面仅展示早期离线交互稿。
 
 ## 2. 访研搭档 Research Copilot
 

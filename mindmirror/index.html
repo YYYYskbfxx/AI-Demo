@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171b38">
+  <title>MindMirror 心境</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail">
+      <a class="brand" href="#home"><span class="brand-icon">✳</span><span>心境 <small>MindMirror</small></span></a>
+      <p class="rail-label">我的反思旅程</p>
+      <div class="journey-status"><strong id="journey-count">正在加载</strong><small id="journey-date"></small><p id="journey-progress"></p></div>
+      <a class="rail-link" href="#session">继续今天的对话 <span>→</span></a>
+      <a class="rail-link" href="#history">历史对话 <span>↗</span></a>
+      <a class="rail-link" href="#insights">研究与数据 <span>↗</span></a>
+    </aside>
+    <main>
+      <header class="topbar"><a href="#home">MindMirror</a></header>
+      <section id="home" class="page active">
+        <div class="hero"><p class="eyebrow">A GUIDED REFLECTION JOURNEY</p><h1>从一次刷手机的时刻，<br><em>看见想法与情绪。</em></h1><p>用八天的引导式对话，练习回顾情境、识别自动想法，并探索新的理解方式。</p><button class="primary" id="start">继续今天的练习 <span>→</span></button></div>
+        <div class="overview"><article><b>01</b><h2>引导与目标</h2><p>认识想法、情绪与行为之间的关系，梳理社交媒体使用的利弊。</p></article><article><b>02—07</b><h2>每日反思</h2><p>从当天的关键时刻出发，使用 CBT 工具探索自动想法。</p></article><article><b>08</b><h2>总结巩固</h2><p>回顾已练习的方法，为今后的自我观察留下提示。</p></article></div>
+      </section>
+      <section id="session" class="page">
+        <div class="section-head"><div><p class="eyebrow" id="day-kicker"></p><h1 id="day-title">今日练习</h1><p id="day-description"></p></div><div class="session-actions"><button class="secondary" id="end-today" type="button">结束今天</button><button class="secondary" id="new-conversation" type="button">开启新对话</button></div></div>
+        <div class="session-grid"><aside class="guide"><h2>当前对话焦点</h2><p id="conversation-focus" class="focus-note">从一件具体经历开始</p><h3 class="guide-subhead">今日引导进度</h3><div id="stage-list"></div><div class="toolbox"><h3 id="tool-heading">CBT 工具</h3><p id="tool-description">当你说出一个具体想法，心境会判断是否适合用工具来探索。</p></div></aside><div class="conversation"><div class="conversation-title"><span class="assistant-icon">✳</span><div><strong>心境</strong><small>DeepSeek · 情境理解 / CBT 策略 / 对话整合</small></div></div><div id="messages" class="messages" aria-live="polite"></div><form id="chat-form"><label for="message">写下你的回应</label><div class="composer"><textarea id="message" rows="2" placeholder="可以从刚刚发生的一件小事说起…"></textarea><button type="submit">发送 ↗</button></div></form><p class="safety">对话保存在当前服务端，并发送至所配置的模型接口生成回应。请勿输入身份信息。感到不适可随时停止；此页面不是心理诊断或紧急支持服务。</p></div></div>
+      </section>
+      <section id="history" class="page"><div class="section-head"><div><p class="eyebrow">CONVERSATION HISTORY</p><h1>历史对话</h1><p>按开始日期选择一段旅程，再查看其中每天的对话。</p></div></div><div class="history-grid"><aside class="history-list"><h2>我的对话</h2><div id="journey-list"></div></aside><div class="history-detail" id="history-detail"><p>选择左侧对话查看记录。</p></div></div></section>
+      <section id="insights" class="page"><div class="section-head"><div><p class="eyebrow">RESEARCH & DATA</p><h1>研究与数据</h1><p>后续加入研究方法、样本与结果展示，并清楚区分论文研究和当前 Web 原型。</p></div></div><div class="placeholder"><span>✳</span><h2>数据分析展示位</h2><p>这一阶段先完成 Agent 结构和交互。研究数据与图表将在核对论文结果后加入。</p><a href="#home">返回首页 →</a></div></section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

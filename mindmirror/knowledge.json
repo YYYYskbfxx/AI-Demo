@@ -1,0 +1,14 @@
+{
+  "purpose":"支持社交媒体使用的引导式自我反思；不用于诊断或替代专业心理服务",
+  "sources":[
+    {"id":"paper","title":"CHI初稿，第3.2—3.4节与访谈结果、讨论","location":"用户提供的CHI初稿.docx","use":"八天流程、自动想法识别、证据探测器、可能性放大镜、视角转换、合作形成新想法"},
+    {"id":"nhs-thought-record","title":"NHS Every Mind Matters: Thought record CBT exercise","url":"https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/","use":"情境、感受、自动想法、支持与反对证据、较平衡的想法"},
+    {"id":"cci-thought-diary","title":"Centre for Clinical Interventions: Thought Diary resources","url":"https://cci.health.wa.gov.au/Resources/For-Clinicians/Anxiety","use":"记录想法并检查不同解释"}
+  ],
+  "tools":[
+    {"id":"evidence","name":"证据探测器","fit":"标签化、非黑即白、自我否定等可检查证据的想法","steps":["请用户说出支持该想法的具体事实","询问有哪些事实与该想法不一致","协助用户比较两边证据，形成由用户认可的平衡想法"]},
+    {"id":"possibility","name":"可能性放大镜","fit":"猜测他人想法或把单一解释当成事实","steps":["区分观察到的事实与对他人想法的猜测","邀请用户探索至少三种其他可能解释","让用户选择自己觉得较合理的解释，不替用户断言"]},
+    {"id":"perspective","name":"视角转换","fit":"用户陷入自责，或只从单一视角理解一段人际情境","steps":["邀请用户设想一位朋友处于同样情境，自己会怎样理解和安慰对方","若涉及他人，再探索对方可能看到的情境，不断言对方真实想法","邀请用户将同样的善意与更完整的视角带回自己，并用自己的话表达"]}
+  ],
+  "guardrails":["每轮只推进一个问题，语言温和且不评判","不诊断用户或把认知扭曲当作确定标签","不编造用户经历或证据","用户明确表达自伤或即时危险时停止常规练习并建议寻求身边可信任的人和当地紧急支持"]
+}
