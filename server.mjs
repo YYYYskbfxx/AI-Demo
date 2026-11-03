@@ -60,7 +60,13 @@ async function callModel(messages) {
     headers: { 'content-type': 'application/json', authorization: `Bearer ${process.env.OPENAI_API_KEY}` },
     body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-4o-mini', messages, temperature: 0.45 })
   });
-  if (!response.ok) throw new Error(`模型接口返回 ${response.status}`);
+  if (!response.ok) {
+    const failure = await response.json().catch(() => ({}));
+    const code = String(failure.error?.code || '');
+    if (code === 'ModelNotOpen') throw new Error('当前账号尚未开通所选豆包模型，请在火山方舟的开通管理中开通模型服务');
+    if (response.status === 401) throw new Error('API Key 未通过认证，请核对 Key 与模型平台');
+    throw new Error(`模型接口返回 ${response.status}${code ? `（${code}）` : ''}`);
+  }
   const data = await response.json();
   return data.choices?.[0]?.message?.content?.trim() || '';
 }

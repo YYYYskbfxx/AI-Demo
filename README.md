@@ -1,6 +1,8 @@
 # 产品原型作品集
 
-这里展示三个独立原型：面向年轻人社交媒体使用反思的「心境 MindMirror」、帮助用户研究者整理访谈材料的「访研搭档」，以及旅行线路与动态 Plan B 工具「途序 Tripwise」。
+这里展示三个独立原型：面向年轻人社交媒体使用反思的「心境 MindMirror」、帮助用户研究者整理访谈材料的「访研搭档」，以及旅行线路与动态 Plan B 工具「途序 Tripwise」。作品集首页为每个项目提供单独的介绍页与体验入口。
+
+三个项目的独立源码仓库：[MindMirror-Web-Agent](https://github.com/YYYYskbfxx/MindMirror-Web-Agent) · [Research-Copilot](https://github.com/YYYYskbfxx/Research-Copilot) · [Tripwise](https://github.com/YYYYskbfxx/Tripwise)。本仓库保留作品集页面和演示入口。
 
 ## 在线体验
 
