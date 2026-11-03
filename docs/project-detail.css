@@ -19,3 +19,17 @@
 .feature-media figcaption{font-size:12px;line-height:1.5;color:#73798b;padding:8px 2px 0}
 @media(max-width:800px){.feature-row{grid-template-columns:1fr}.feature-copy h3{font-size:20px}.feature-media{padding:8px}}
 @media(max-width:480px){.feature-row{padding:14px;gap:14px}.feature-media.pair{gap:7px}.feature-media figcaption{font-size:11px}.feature-copy p{font-size:14px}}
+
+/* Step-by-step screenshots appear only inside detailed project pages. */
+.step-gallery{margin-top:62px}
+.step-gallery>p{max-width:850px}
+.step-section{padding:28px 32px;margin:26px 0;border:1px solid #e4e5ed;border-radius:20px;background:#fff;box-shadow:0 14px 36px #2720450a}
+.step-section h3{font-size:21px;margin:0 0 20px;color:#282b43}
+.step-images{display:flex;justify-content:center;align-items:flex-start;gap:20px}
+.step-images a{display:block;min-width:0;text-align:center}
+.step-images img{display:block;width:100%;max-width:330px;height:auto;margin:auto;border:1px solid #e4e6ed;background:#f8f9fa}
+.step-images.desktop img{max-width:900px;border-radius:8px}
+.step-section ul{max-width:900px;margin:22px auto 0;padding-left:24px}
+.step-section li{font-size:15px;line-height:1.8;margin:7px 0}
+@media(max-width:700px){.step-section{padding:18px}.step-section h3{font-size:18px}.step-section li{font-size:14px}.step-images{gap:10px}}
+@media(max-width:480px){.step-images:not(.desktop){flex-direction:column;align-items:center}.step-images:not(.desktop) a{width:100%}.step-images:not(.desktop) img{max-width:290px}}
