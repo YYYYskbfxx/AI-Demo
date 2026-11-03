@@ -2,6 +2,8 @@
 
 这里展示三个独立的产品原型：面向年轻人社交媒体使用反思的「心境 MindMirror」、帮助用户研究者整理访谈材料的「访研搭档 Research Copilot」，以及旅行线路与动态 Plan B 工具「途序 Tripwise」。[打开在线作品集](https://yyyyskbfxx.github.io/AI-Demo/)。
 
+[下载四页 PDF 作品集](https://yyyyskbfxx.github.io/AI-Demo/portfolio.pdf)：包含项目简介、界面截图，以及可点击的 GitHub 仓库与详细案例链接。
+
 每个项目有独立的详细介绍、界面展示和体验入口：
 
 | 项目 | 一句话介绍 | 详细介绍 | 体验 | 独立仓库 |
