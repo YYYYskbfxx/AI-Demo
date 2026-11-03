@@ -10,11 +10,11 @@
 
 [心境 MindMirror](docs/mindmirror-project.html) · [访研搭档 Research Copilot](docs/research.html) · [途序 Tripwise](docs/travel.html)
 
-GitHub Pages 展示三个项目入口。心境的公开页面包含项目介绍和早期离线交互稿；实时 DeepSeek 对话与历史记录需要运行 [`mindmirror/`](mindmirror/) 中的 Node 服务。访研搭档可在另行配置 Node 服务后调用模型；途序当前为规则驱动的交互原型。
+GitHub Pages 展示三个项目入口。心境的公开页面包含项目介绍和沿用独立项目最新版设计的静态界面预览；实时 DeepSeek 对话与历史记录需要运行 [独立 Agent 仓库](https://github.com/YYYYskbfxx/MindMirror-Web-Agent)中的 Node 服务。访研搭档可在另行配置 Node 服务后调用模型；途序当前为规则驱动的交互原型。三个案例页均按功能配有界面截图与说明。
 
 ## 1. 心境 MindMirror
 
-[查看心境项目介绍](docs/mindmirror-project.html) · [查看 Agent 源码与运行说明](mindmirror/) · [体验早期离线交互稿](docs/mindmirror.html)
+[查看心境项目介绍](docs/mindmirror-project.html) · [查看独立 Agent 源码与运行说明](https://github.com/YYYYskbfxx/MindMirror-Web-Agent) · [查看最新版界面预览](docs/mindmirror.html)
 
 ### 项目背景
 
@@ -26,7 +26,7 @@ GitHub Pages 展示三个项目入口。心境的公开页面包含项目介绍�
 
 ### 界面设计
 
-新版 Web 界面以旅程、日期导航和聊天区组织八天流程。发送后消息立即显示在对话区，模型回复期间展示生成状态；历史页按旅程和日期查看记录。移动端采用响应式布局。GitHub Pages 上的旧页面仅展示早期离线交互稿。
+新版 Web 界面以旅程、日期导航和聊天区组织八天流程。发送后消息立即显示在对话区，模型回复期间展示生成状态；历史页按旅程和日期查看记录。移动端采用响应式布局。GitHub Pages 使用同款界面提供静态预览，不运行模型服务。
 
 ## 2. 访研搭档 Research Copilot
 
@@ -156,14 +156,14 @@ HOST=0.0.0.0
 - Node.js 内置 HTTP 服务，无生产依赖。
 - 可选 OpenAI 兼容接口；GitHub Pages 默认展示离线交互。
 - Render 部署时由同一个 Node 服务托管网页与模型代理接口。
-- 早期离线心境页面不持久化练习内容；新版 [`mindmirror/`](mindmirror/) 服务在本机 `data/` 保存对话与日期记录，该目录不上传 GitHub。访研搭档的工作区保存在本机浏览器中；途序历史路线仅在当前页面会话保留。接入实时模型后，相关输入会发送至所配置的模型接口。
+- 心境的静态界面预览不持久化练习内容；独立 Agent 服务在本机 `data/` 保存对话与日期记录，该目录不上传 GitHub。访研搭档的工作区保存在本机浏览器中；途序历史路线仅在当前页面会话保留。接入实时模型后，相关输入会发送至所配置的模型接口。
 
 ```text
 ai-builder-demos/
 ├── docs/
 │   ├── index.html       # 三个独立项目的入口
 │   ├── mindmirror-project.html  # 心境项目介绍
-│   ├── mindmirror.html  # 心境早期离线交互稿
+│   ├── mindmirror.html  # 心境最新版设计的静态界面预览
 │   ├── research.html    # 访研搭档
 │   └── travel.html      # 途序
 ├── mindmirror/          # 新版心境 Agent 源码与运行说明

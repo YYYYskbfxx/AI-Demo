@@ -1,37 +1,35 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f7f3"><title>心境 MindMirror · 使用反思练习</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="mindmirror.css"></head><body>
-<div class="app-shell"><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">✳</span><span class="brand-name">心境 MindMirror<small>独立产品原型</small></span></a><a class="back-link" href="index.html">← 返回项目首页</a><div class="side-bottom"><div class="profile"><div class="avatar">✳</div><div>使用反思练习<small>离线体验 · 可选模型接入</small></div></div></div></aside>
-<main class="main-content"><header class="topbar"><div class="breadcrumb"><a href="index.html">项目首页</a> <span>/</span> <b>心境</b></div><div class="top-actions"><span class="availability"><i></i><span id="mode-label">离线体验模式</span></span><button class="top-button" id="reset-button">↻ <span>重新开始</span></button></div></header>
-      <section class="view active" id="mindmirror-view">
-        <div class="page-heading"><div><div class="eyebrow"><span class="eyebrow-mark">✳</span> AI REFLECTION COMPANION</div><h1>理解刷手机背后的想法，<em>再做选择。</em></h1><p>MindMirror 以 CBT 为基础，通过日常对话引导用户回顾使用情境、识别自动想法并尝试认知重构。</p></div><div class="privacy-pill"><span>◈</span> 默认离线；接入模型后发送至所配置接口</div></div>
-        <div class="mind-layout">
-          <aside class="journey-card">
-            <div class="journey-top"><span class="label-overline">本次练习</span><span class="step-count" id="step-count">01 <i>/ 04</i></span></div>
-            <h2>从觉察开始</h2><p class="journey-intro">用几分钟梳理一次刷手机的时刻，看看自己真正需要什么。</p>
-            <div class="progress-track"><span id="progress-bar"></span></div>
-            <div class="step-list" id="step-list">
-              <div class="step-item current"><span class="step-dot">1</span><div>回顾情境<small>发生了什么？</small></div><span class="step-check"></span></div>
-              <div class="step-item"><span class="step-dot">2</span><div>识别想法<small>脑中闪过什么？</small></div><span class="step-check"></span></div>
-              <div class="step-item"><span class="step-dot">3</span><div>换个角度<small>还有别的可能吗？</small></div><span class="step-check"></span></div>
-              <div class="step-item"><span class="step-dot">4</span><div>尝试行动<small>下一步可以做什么？</small></div><span class="step-check"></span></div>
-            </div>
-            <div class="gentle-note"><span>✦</span><p>如果暂时不想继续，停在这里也可以。<br/>练习由你决定节奏。</p></div>
-            <div class="case-tag"><span class="case-spark">✳</span><div><b>演示情境</b><small>虚构案例 · 可输入自己的情况</small></div></div>
-          </aside>
-
-          <section class="conversation-card" aria-label="心境对话体验">
-            <div class="conversation-head"><div class="assistant-id"><div class="assistant-avatar">✳</div><div><b>心境 <span class="online-dot"></span></b><small>认知行为练习 · 温和陪伴</small></div></div><button class="icon-button" id="clear-chat" title="清空并重新开始">···</button></div>
-            <div class="chat-stream" id="mind-chat" aria-live="polite">
-              <div class="day-divider"><span>今天 · 一次练习</span></div>
-              <div class="message-row assistant-row"><div class="tiny-avatar">✳</div><div class="message-stack"><div class="message assistant-message">你好，我是心境。我们可以一起回看一次你不太想发生、却又重复出现的刷手机时刻。<br/><br/>你愿意从最近的一次开始吗？当时你正在做什么，心情怎么样？</div><span class="message-time">刚刚</span></div></div>
-              <div class="prompt-chips" id="starter-chips"><button>复习时总忍不住刷视频</button><button>睡前一打开就停不下来</button></div>
-            </div>
-            <div class="typing-row" id="typing-row" hidden><span></span><span></span><span></span><small>心境正在整理</small></div>
-            <form class="composer" id="mind-form"><textarea id="mind-input" rows="1" maxlength="900" placeholder="写下你此刻想到的内容…" aria-label="写下你的想法"></textarea><div class="composer-footer"><span>↵ 发送 · 你的内容不会被保存</span><button class="send-button" type="submit" aria-label="发送">↑</button></div></form>
-            <div class="under-composer">如果练习让你不舒服，可以随时停止。心境不是医疗或心理诊断服务。</div>
-          </section>
-        </div>
-        <div class="bottom-caption"><span>MINDMIRROR</span><span>日常反思 · 自动想法识别 · 认知重构</span><span>独立项目</span></div>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#171b38">
+  <meta name="description" content="心境 MindMirror 最新版 Web Agent 界面预览：八天反思旅程、每日对话与历史记录。"><title>心境 MindMirror · 最新版界面预览</title>
+  <link rel="stylesheet" href="mindmirror-app.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail">
+      <a class="brand" href="#home"><span class="brand-icon">✳</span><span>心境 <small>MindMirror</small></span></a>
+      <p class="rail-label">我的反思旅程</p>
+      <div class="journey-status"><strong id="journey-count">正在加载</strong><small id="journey-date"></small><p id="journey-progress"></p></div>
+      <a class="rail-link" href="#session">继续今天的对话 <span>→</span></a>
+      <a class="rail-link" href="#history">历史对话 <span>↗</span></a>
+    </aside>
+    <main>
+      <header class="topbar"><a href="index.html">← 返回作品集</a><span class="preview-label">最新版界面预览 · 实时对话需运行独立服务</span></header>
+      <section id="home" class="page active">
+        <div class="hero"><p class="eyebrow">A GUIDED REFLECTION JOURNEY</p><h1>从一次刷手机的时刻，<br><em>看见想法与情绪。</em></h1><p>用八天的引导式对话，练习回顾情境、识别自动想法，并探索新的理解方式。</p><button class="primary" id="start">继续今天的练习 <span>→</span></button></div>
+        <div class="overview"><article><b>01</b><h2>引导与目标</h2><p>认识想法、情绪与行为之间的关系，梳理社交媒体使用的利弊。</p></article><article><b>02—07</b><h2>每日反思</h2><p>从当天的关键时刻出发，使用 CBT 工具探索自动想法。</p></article><article><b>08</b><h2>总结巩固</h2><p>回顾已练习的方法，为今后的自我观察留下提示。</p></article></div>
       </section>
-
-<footer class="site-footer"><span>心境 MindMirror · 使用反思原型</span><span>请勿输入敏感个人信息</span></footer></main></div><script src="mindmirror.js"></script></body></html>
+      <section id="session" class="page">
+        <div class="section-head"><div><p class="eyebrow" id="day-kicker"></p><h1 id="day-title">今日练习</h1><p id="day-description"></p></div><div class="session-actions"><button class="secondary" id="end-today" type="button">结束今天</button><button class="secondary" id="new-conversation" type="button">开启新对话</button></div></div>
+        <div class="session-grid"><aside class="guide"><h2>当前对话焦点</h2><p id="conversation-focus" class="focus-note">从一件具体经历开始</p><h3 class="guide-subhead">今日引导进度</h3><div id="stage-list"></div><div class="toolbox"><h3 id="tool-heading">CBT 工具</h3><p id="tool-description">当你说出一个具体想法，心境会判断是否适合用工具来探索。</p></div></aside><div class="conversation"><div class="conversation-title"><span class="assistant-icon">✳</span><div><strong>心境</strong><small>八天反思旅程 · 对话界面预览</small></div></div><div id="messages" class="messages" aria-live="polite"></div><form id="chat-form"><label for="message">写下你的回应</label><div class="composer"><textarea id="message" rows="2" placeholder="可以从刚刚发生的一件小事说起…"></textarea><button type="submit">发送 ↗</button></div></form><p class="safety">当前为最新版界面的静态预览。实时模型对话与历史保存需要运行独立仓库中的 Node 服务。此页面不提供诊断或治疗。</p></div></div>
+      </section>
+      <section id="history" class="page"><div class="section-head"><div><p class="eyebrow">CONVERSATION HISTORY</p><h1>历史对话</h1><p>按开始日期选择一段旅程，再查看其中每天的对话。</p></div></div><div class="history-grid"><aside class="history-list"><h2>我的对话</h2><div id="journey-list"></div></aside><div class="history-detail" id="history-detail"><p>选择左侧对话查看记录。</p></div></div></section>
+      <section id="insights" class="page" hidden><div class="section-head"><div><p class="eyebrow">RESEARCH & DATA</p><h1>研究与数据</h1><p>后续加入研究方法、样本与结果展示，并清楚区分论文研究和当前 Web 原型。</p></div></div><div class="placeholder"><span>✳</span><h2>数据分析展示位</h2><p>这一阶段先完成 Agent 结构和交互。研究数据与图表将在核对论文结果后加入。</p><a href="#home">返回首页 →</a></div></section>
+    </main>
+  </div>
+  <script src="mindmirror-preview.js"></script>
+</body>
+</html>
