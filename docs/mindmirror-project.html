@@ -1,11 +1,23 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f6fb"><meta name="description" content="心境 MindMirror：基于 CBT 的八天对话式反思 Agent。"><title>心境 MindMirror · 项目介绍</title><link rel="stylesheet" href="portfolio.css"><style>
-.detail{max-width:850px;margin:70px auto 100px}.detail h1{font-size:clamp(38px,6vw,64px);line-height:1.15;margin:12px 0 24px}.detail h2{margin-top:48px;font-size:24px}.detail p,.detail li{font-size:17px;line-height:1.85;color:#42445f}.detail ul{padding-left:22px}.detail .actions{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 44px}.detail .actions a{display:inline-block;padding:13px 20px;border-radius:14px;background:#6268ca;color:white;text-decoration:none}.detail .actions a.secondary{background:#eeeffc;color:#454b9b}.note{padding:18px 22px;border-radius:16px;background:#f1f2fb;color:#555b86;line-height:1.7}
-</style></head><body><div class="wrap"><header class="top"><a class="brand" href="index.html" style="text-decoration:none"><span class="brand-mark">✳</span><span>尹伊霄 · 产品原型作品集</span></a><span class="top-note">项目 01 / 心境</span></header>
-<main class="detail"><div class="eyebrow">CBT CONVERSATIONAL AGENT</div><h1>心境 <small>MindMirror</small></h1><p>心境面向希望重新理解社交媒体使用习惯的年轻人。它通过温和的多轮对话，帮助用户回看具体情境，辨认自动想法与情绪，并尝试形成更平衡的表达和可行的下一步。</p>
-<div class="actions"><a href="https://github.com/YYYYskbfxx/MindMirror-Web-Agent">查看独立 Agent 仓库 ↗</a><a class="secondary" href="mindmirror.html">体验早期离线交互稿 →</a></div>
-<div class="note">当前公开页面是项目介绍和早期离线交互稿。实时 DeepSeek 对话、按日期保存的八天旅程与历史记录需要按源码说明在 Node 服务中运行；GitHub Pages 不运行模型服务，也不会展示本地对话记录。</div>
-<h2>项目背景</h2><p>单纯限制屏幕时间难以解释反复刷手机背后的情绪、压力和自动想法。心境将研究初稿中的八天反思流程转化为可在桌面与手机浏览器使用的 Web Agent。</p>
-<h2>核心能力</h2><ul><li>第 1 天自我介绍与轻松探索；第 2—7 天围绕当天情境反思；第 8 天回顾。</li><li>情境理解、CBT 工具选择与回复整合三个模型角色协作，使用可调用的 CBT 资料库。</li><li>根据对话选择证据探测、可能性放大镜或视角转换；用户可随时结束或继续当天对话。</li><li>按日期保存会话，支持开启新旅程和查看历史对话。</li></ul>
-<h2>界面设计</h2><p>左侧聚合旅程与日期导航，主界面以聊天记录承载多轮交流；消息发送后立即进入对话区，再显示生成状态和回复。手机端采用响应式布局，保留对话、历史与阶段跳转。</p>
-</main><footer class="foot">心境是自我反思练习原型，不提供诊断或治疗。</footer></div></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="面向希望理解社交媒体使用习惯的年轻人，设计八天对话式反思旅程。通过情境理解、CBT 工具选择和对话整合，帮助用户梳理具体事件、自动想法与下一步。">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="心境 MindMirror｜尹伊霄产品原型作品集">
+  <meta property="og:description" content="面向希望理解社交媒体使用习惯的年轻人，设计八天对话式反思旅程。通过情境理解、CBT 工具选择和对话整合，帮助用户梳理具体事件、自动想法与下一步。">
+  <title>心境 MindMirror｜项目案例 · 尹伊霄</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body><div class="wrap">
+  <header class="top"><a class="brand" href="index.html"><span class="brand-mark">✳</span><span>尹伊霄 · 产品原型作品集</span></a><span class="top-note">项目 01 / 心境</span></header>
+  <main class="detail"><div class="eyebrow">CBT CONVERSATIONAL AGENT</div><h1>心境 <small>MindMirror</small></h1>
+    <p class="lead">面向希望理解社交媒体使用习惯的年轻人，设计八天对话式反思旅程。通过情境理解、CBT 工具选择和对话整合，帮助用户梳理具体事件、自动想法与下一步。</p>
+    <div class="meta"><span>八天反思旅程</span><span>多角色协作</span><span>CBT 工具</span><span>全栈 Web Agent</span></div><div class="actions"><a class="" href="https://github.com/YYYYskbfxx/MindMirror-Web-Agent">查看独立 Agent 仓库 ↗</a><a class="secondary" href="mindmirror.html">体验早期离线交互稿 →</a></div>
+    <div class="note">公开作品集提供项目介绍和早期离线交互稿。最新版的实时 DeepSeek 对话、按日期保存的旅程与历史记录需要运行独立仓库中的 Node 服务；个人反思记录不会上传到 GitHub。</div>
+    <section><h2>项目背景与目标用户</h2><p>面向希望重新理解刷社交媒体行为的年轻人。单纯记录屏幕时间无法解释使用行为背后的压力、情绪和自动想法。产品希望让用户从一次具体情境出发，逐步看见“发生了什么、我怎么想、我还可以怎样理解”。</p></section><section><h2>产品目标与设计判断</h2><p>核心目标是降低反思的开始门槛，同时让对话保持连续。第 1 天以自我介绍和轻量探索建立语境，第 2—7 天围绕当天情境反思，第 8 天回顾。工具不以固定轮数强迫用户完成，用户可以结束或继续当天对话。</p></section><section><h2>核心体验流程</h2><p>用户进入当天旅程 → 描述一件具体情境 → Agent 识别情绪、自动想法及当前阶段 → 选择证据探测器、可能性放大镜或视角转换等工具 → 形成更平衡的表达与可行的小步骤 → 保存当天记录并在后续回顾。</p></section><section><h2>界面与交互</h2><p>左侧呈现旅程、日期和历史入口；主区域承载多轮聊天。消息发送后立即出现在对话区，随后展示生成状态和回复。响应式布局让手机浏览器也能完成对话、查看记录和切换阶段。</p></section><section><h2>Vibe coding 与实现</h2><p>先把八天流程、阶段状态和工具调用条件写成可执行的产品逻辑，再使用原生 HTML、CSS、JavaScript 与 Node.js 实现。服务端通过火山方舟调用 DeepSeek；情境理解与 CBT 策略两个角色并行分析，第三个角色整合为用户可见回复。资料库记录工具定义和来源。</p></section><section><h2>当前成果与边界</h2><p>独立仓库包含可在本机运行的 Agent、对话历史和配置说明。它是自我反思练习原型，不提供诊断或治疗；尚未完成真实用户长期使用效果验证。</p></section>
+    <p class="closing">SEO GEO做好</p>
+  </main><footer class="foot">个人 AI 产品原型 · 自我反思练习，不提供诊断或治疗</footer>
+</div></body></html>

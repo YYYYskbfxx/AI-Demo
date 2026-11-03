@@ -1,1 +1,23 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>访研搭档 Research Copilot · 项目介绍</title><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="project-detail.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="index.html"><span class="brand-mark">⌕</span><span>尹伊霄 · 产品原型作品集</span></a><span class="top-note">项目 02 / 访研搭档</span></header><main class="detail"><div class="eyebrow">RESEARCH WORKFLOW COPILOT</div><h1>访研搭档 <small>Research Copilot</small></h1><p>面向用户研究员和产品经理的研究工作台。研究者可以设计研究、导入主观或客观材料、核对证据，并与 AI 多轮讨论候选洞察和产品机会。</p><div class="meta"><span>研究设计</span><span>主客观材料</span><span>人工复核</span><span>模型对话</span></div><div class="actions"><a href="research.html">进入研究工作台 →</a><a class="secondary" href="https://github.com/YYYYskbfxx/Research-Copilot">查看独立仓库与模拟资料 ↗</a></div><div class="note">公开页面使用模拟研究材料。GitHub Pages 可体验资料导入、证据定位、卡片编辑和离线引导；开放式多轮模型对话需要运行仓库中的 Node 服务并在服务端配置模型 Key。研究结论与产品机会需由研究者确认。</div><h2>研究问题</h2><p>常规研究材料分散在访谈、评分和任务记录中，整理者很难快速追溯一条洞察来自哪里，也容易把用户感受、观察事实和分析解释混在一起。</p><h2>核心流程</h2><ul><li>输入研究内容、目的、范围样本和评价维度，得到可编辑研究方案。</li><li>按主观或客观资料导入 CSV、TXT 或粘贴文本，预览字段映射与缺失情况。</li><li>将原话、任务表现和评分关联到候选洞察；点击证据编号回到原始记录。</li><li>在可收起的对话栏追问支持证据、不同案例和可能解释；修改前先预览。</li><li>研究者确认洞察后，再筛选产品机会并汇总可编辑报告。</li></ul><h2>演示案例</h2><p>内置一套虚构的手机端 AI 助手功能试用资料，涉及每日资讯推荐与每日总结、6 位虚构参与者和 24 条记录。案例用于展示工作流，不代表实习项目的原始数据或真实产品效果。</p></main><footer class="foot">个人 AI 产品原型 · 资料与分析结果为模拟案例</footer></div></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="面向用户研究员和产品经理的研究工作台。把研究方案、主客观材料、证据追溯、洞察复核、产品机会和报告整理放进一条可编辑的工作流。">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="访研搭档 Research Copilot｜尹伊霄产品原型作品集">
+  <meta property="og:description" content="面向用户研究员和产品经理的研究工作台。把研究方案、主客观材料、证据追溯、洞察复核、产品机会和报告整理放进一条可编辑的工作流。">
+  <title>访研搭档 Research Copilot｜项目案例 · 尹伊霄</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body><div class="wrap">
+  <header class="top"><a class="brand" href="index.html"><span class="brand-mark">⌕</span><span>尹伊霄 · 产品原型作品集</span></a><span class="top-note">项目 02 / 访研搭档</span></header>
+  <main class="detail"><div class="eyebrow">USER RESEARCH WORKBENCH</div><h1>访研搭档 <small>Research Copilot</small></h1>
+    <p class="lead">面向用户研究员和产品经理的研究工作台。把研究方案、主客观材料、证据追溯、洞察复核、产品机会和报告整理放进一条可编辑的工作流。</p>
+    <div class="meta"><span>研究设计</span><span>主客观资料</span><span>证据追溯</span><span>人工确认</span></div><div class="actions"><a class="" href="research.html">进入研究工作台 →</a><a class="secondary" href="https://github.com/YYYYskbfxx/Research-Copilot">查看独立仓库与模拟资料 ↗</a></div>
+    <div class="note">公开页面使用模拟研究材料，可体验导入、定位、卡片编辑和离线引导。开放式模型对话需运行独立仓库的 Node 服务并在服务端配置 Key。候选洞察和产品机会都需要研究者复核。</div>
+    <section><h2>项目背景与目标用户</h2><p>用户研究员和产品经理常同时处理访谈原话、任务观察、评分和研究假设。材料散落在多个文件时，洞察容易脱离出处，主观解释也容易与观察事实混在一起。工具面向需要快速整理材料、但必须保留研究判断权的使用者。</p></section><section><h2>产品目标与设计原则</h2><p>输入研究内容、目的、范围样本和评价维度，输出可编辑研究方案；导入主观材料、客观材料或两者之一，生成候选分析。每一条洞察都应能回到原始记录，并区分支持证据、相反案例与仍需核对的解释。</p></section><section><h2>核心体验流程</h2><p>建立研究问题 → 编辑方案 → 导入 CSV、TXT 或粘贴内容 → 检查字段映射、参与者 ID 与缺失情况 → 在分析工作区查看证据和候选洞察 → 与 AI 围绕当前材料多轮追问 → 研究者确认、修改或驳回 → 从已确认洞察整理产品机会与报告。</p></section><section><h2>关键界面与人工介入</h2><p>工作区让研究材料、洞察卡和对话并排协作，材料与对话可收起；点击证据编号可定位到原记录。AI 对话给出的改写建议需要先预览再写入卡片。研究者在证据核对、洞察确认和产品机会取舍三个节点作判断。</p></section><section><h2>Vibe coding 与实现</h2><p>先定义输入输出、资料结构、人工复核状态和页面流转，再使用原生前端与 Node.js 完成可运行原型。工作区支持本地存储；服务端持有火山方舟 Key，调用已配置的 DeepSeek 模型。离线模式使用预置资料与规则，方便展示不依赖模型的研究流程。</p></section><section><h2>演示案例与当前边界</h2><p>内置一套虚构的手机端 AI 助手试用案例：6 位虚构参与者、24 条记录，覆盖每日资讯推荐和每日总结。数据及分析结果只用于演示证据核对和产品判断流程，不代表真实实习资料、真实用户表现或上线验收结论。</p></section>
+    <p class="closing">SEO GEO做好</p>
+  </main><footer class="foot">个人 AI 产品原型 · 演示资料与结果为模拟案例</footer>
+</div></body></html>

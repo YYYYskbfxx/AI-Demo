@@ -1,1 +1,30 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>途序 Tripwise · 项目介绍</title><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="project-detail.css"></head><body><div class="wrap"><header class="top"><a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>尹伊霄 · 产品原型作品集</span></a><span class="top-note">项目 03 / 途序</span></header><main class="detail"><div class="eyebrow">TRAVEL PLANNING PROTOTYPE</div><h1>途序 <small>Tripwise</small></h1><p>把收藏地点、想去程度和旅行偏好放进同一条规划流程。行程发生变化时，比较不同调整方案的取舍，再由用户确认。</p><div class="meta"><span>地点优先级</span><span>行程排布</span><span>动态 Plan B</span><span>交互原型</span></div><div class="actions"><a href="travel.html">体验移动端原型 →</a><a class="secondary" href="https://github.com/YYYYskbfxx/Tripwise">查看独立原型仓库 ↗</a></div><div class="note">当前为浏览器中的规则驱动交互原型：地点、时间和变化情境采用演示数据；路线估算与 Plan B 由前端规则生成，尚未接入真实地图、交通、天气或人流服务。</div><h2>产品问题</h2><p>用户收藏了很多地点，却仍需自己决定哪些必须去、怎样安排得顺路；旅行中遇到停留延长或外部变化，还要重新权衡剩余行程。</p><h2>核心流程</h2><ul><li>选择地点并标注「必去、想去、顺路」，表达不同优先级。</li><li>设置天数、节奏、主题与交通方式，生成可调整的每日路线。</li><li>在行中记录当前进度；遇到变化时比较保留顺延、相近替换和减少一站。</li><li>确认后才应用调整，保留本次页面会话中的路线历史。</li></ul><h2>实现方式</h2><p>使用 HTML、CSS 与 JavaScript 制作移动端原型，将偏好、地点权重、时间安排和候选调整写为可交互的前端逻辑。界面让用户看到每种调整的理由和代价，再作选择。</p></main><footer class="foot">个人产品原型 · 路线和外部变化均为演示数据</footer></div></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="面向收藏了许多地点、却难以排出合适行程的自由行用户。根据地点优先级和旅行偏好生成路线，并在旅途中比较不同 Plan B 的影响。">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="途序 Tripwise｜尹伊霄产品原型作品集">
+  <meta property="og:description" content="面向收藏了许多地点、却难以排出合适行程的自由行用户。根据地点优先级和旅行偏好生成路线，并在旅途中比较不同 Plan B 的影响。">
+  <title>途序 Tripwise｜项目案例 · 尹伊霄</title>
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="project-detail.css">
+</head>
+<body><div class="wrap">
+  <header class="top"><a class="brand" href="index.html"><span class="brand-mark">⌁</span><span>尹伊霄 · 产品原型作品集</span></a><span class="top-note">项目 03 / 途序</span></header>
+  <main class="detail"><div class="eyebrow">TRAVEL PLANNING PROTOTYPE</div><h1>途序 <small>Tripwise</small></h1>
+    <p class="lead">面向收藏了许多地点、却难以排出合适行程的自由行用户。根据地点优先级和旅行偏好生成路线，并在旅途中比较不同 Plan B 的影响。</p>
+    <div class="meta"><span>地点优先级</span><span>路线排布</span><span>行中进度</span><span>Plan B</span></div><div class="actions"><a class="" href="travel.html">体验移动端原型 →</a><a class="secondary" href="https://github.com/YYYYskbfxx/Tripwise">查看独立仓库与界面图 ↗</a></div>
+    <div class="note">浏览器中的规则驱动原型。地点、时间和变化情境均为演示数据；路线估算与 Plan B 由前端规则生成，尚未接入真实地图、交通、天气或人流服务。</div>
+    <section><h2>项目背景与目标用户</h2><p>自由行用户常在多个平台收藏景点和餐厅，规划时仍需自己判断哪些必须去、哪些可以顺路加入，以及如何兼顾天数、节奏与交通。行中一旦停留延长或遇到外部变化，又要重新安排剩余地点。</p></section><section><h2>产品目标与设计判断</h2><p>产品把“规划前的优先级表达”和“变化后的重新取舍”串成一条流程。必去、想去、顺路三个层级帮助用户表达真实偏好；天数、节奏、主题和交通方式成为排程条件；任何 Plan B 都先展示影响，再由用户确认应用。</p></section><section><h2>核心体验流程</h2><p>首页进入规划 → 选择城市与地点并标注优先级 → 设置天数、开始时间、节奏、主题和交通 → 生成按天路线 → 在行中助手查看进度 → 遇到模拟变化时比较顺延、替换、减少一站 → 确认调整。</p></section><section><h2>界面展示</h2><p>首页、地点选择、旅行偏好、路线方案、行中助手和 Plan B 对比构成完整的移动端体验。下方截图可查看关键状态；点击“体验移动端原型”可以逐步操作。</p></section><div class="gallery" aria-label="途序界面展示">
+<figure><a href="images/tripwise/home.png"><img src="images/tripwise/previews/home.png" alt="途序首页：当前旅程和规划入口" loading="lazy"></a><figcaption>01 首页</figcaption></figure>
+<figure><a href="images/tripwise/places.png"><img src="images/tripwise/previews/places.png" alt="选择地点并标注想去优先级" loading="lazy"></a><figcaption>02 地点选择</figcaption></figure>
+<figure><a href="images/tripwise/preferences.png"><img src="images/tripwise/previews/preferences.png" alt="设置天数、节奏和交通偏好" loading="lazy"></a><figcaption>03 旅行偏好</figcaption></figure>
+<figure><a href="images/tripwise/route.png"><img src="images/tripwise/previews/route.png" alt="查看按天排布的路线" loading="lazy"></a><figcaption>04 路线方案</figcaption></figure>
+<figure><a href="images/tripwise/journey.png"><img src="images/tripwise/previews/journey.png" alt="行中助手查看进度" loading="lazy"></a><figcaption>05 行中助手</figcaption></figure>
+<figure><a href="images/tripwise/planb.png"><img src="images/tripwise/previews/planb.png" alt="比较不同 Plan B 的影响" loading="lazy"></a><figcaption>06 Plan B 对比</figcaption></figure>
+</div><section><h2>Vibe coding 与实现</h2><p>先明确地点优先级、排程条件和 Plan B 的决策规则，再用原生 HTML、CSS 与 JavaScript 实现。前端根据地点权重、主题和示意距离生成路线，并把候选调整及其代价呈现给用户。当前会话保留路线历史，刷新后重置。</p></section><section><h2>当前成果与边界</h2><p>独立仓库提供完整的交互页面与界面截图。地点位置、时间、天气、人流和交通变化均为模拟或估算，路线未经过真实出行验证；后续可接入地图、营业信息和实时交通，再开展任务测试。</p></section>
+    <p class="closing">SEO GEO做好</p>
+  </main><footer class="foot">个人产品原型 · 路线和外部变化均为演示数据</footer>
+</div></body></html>
