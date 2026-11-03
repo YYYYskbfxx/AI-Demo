@@ -53,47 +53,32 @@ MindMirror 是一款以认知行为疗法（CBT）为基础的对话式智能体
 
 ### 页面设计与功能
 
-底部只保留「首页 / 规划」两个一级入口。规划从选地点进入，按「选择地点 → 设置偏好 → 路线方案」推进；行中助手和 Plan B 从已生成的路线进入。以下截图使用西安预置地点，展示原型的一个可复现流程。
+底部只保留「首页 / 规划」两个一级入口。规划按「选择地点 → 设置偏好 → 路线方案」推进；行中助手和 Plan B 从路线进入。截图使用西安预置地点，展示一条可复现的演示流程。
 
-#### 首页｜开始规划与回看路线
+<table>
+<tr>
+<td align="center" valign="top" width="50%"><strong>01 · 首页</strong><br><img src="docs/images/tripwise/home.png" alt="首页：新规划入口与历史路线" width="260"><br>开始新规划；查看本次会话生成的历史路线。</td>
+<td align="center" valign="top" width="50%"><strong>02 · 选择地点</strong><br><img src="docs/images/tripwise/places.png" alt="选择目的地和地点，标记收藏优先级" width="260"><br>选择城市与地点，标记「必去 / 想去 / 顺路」，为排程提供优先级。</td>
+</tr>
+</table>
 
-<img src="docs/images/tripwise/home.png" alt="途序首页：开始新规划与历史路线" width="340">
+<table>
+<tr>
+<td align="center" valign="top" width="50%"><strong>03 · 规划偏好</strong><br><img src="docs/images/tripwise/preferences.png" alt="设置游玩天数、节奏和主题" width="260"><br>设置游玩天数、开始时间、交通方式、节奏、主题与变化时的默认倾向。</td>
+<td align="center" valign="top" width="50%"><strong>04 · 路线方案</strong><br><img src="docs/images/tripwise/route.png" alt="按天展示路线时间轴与站点操作" width="260"><br>查看每日时间轴与估算路程；锁定、移出地点或重新生成路线。</td>
+</tr>
+</table>
 
-首页提供新旅行入口，并列出本次页面会话中生成的历史路线。点击历史卡片可回到对应路线；刷新后演示记录重置。
+<table>
+<tr>
+<td align="center" valign="top" width="50%"><strong>05 · 行中助手</strong><br><img src="docs/images/tripwise/journey.png" alt="当前停留点与下一站" width="260"><br>记录当前站的完成情况，并查看接下来的安排。</td>
+<td align="center" valign="top" width="50%"><strong>06 · 延长停留</strong><br><img src="docs/images/tripwise/delay.png" alt="快捷选择或自定义延长停留时间" width="260"><br>快捷选择 15、30、60、90 分钟，或在 10–180 分钟内自定义时长。</td>
+</tr>
+</table>
 
-#### 选择地点｜明确收藏意图
+<p align="center"><strong>07 · Plan B 对比</strong><br><img src="docs/images/tripwise/planb.png" alt="比较保留顺延、相近替换与减少一站" width="300"><br>模拟天气、人流或交通变化；比较保留、替换和减少一站的取舍，确认后再应用。</p>
 
-<img src="docs/images/tripwise/places.png" alt="选择目的地和想去的地点，并设置必去、想去、顺路优先级" width="340">
-
-先选西安或成都，再增减想去的景点与美食，并标记「必去 / 想去 / 顺路」。这些标记和地点的示意位置会参与后续排程。
-
-#### 规划偏好｜决定每天怎么排
-
-<img src="docs/images/tripwise/preferences.png" alt="设置游玩天数、开始时间、交通方式、旅行节奏和主题" width="340">
-
-设置游玩天数、每日开始时间、交通方式、节奏、主题及变化发生时的默认倾向。生成路线后，地点按所选天数和每天的站点上限分配。
-
-#### 路线方案｜查看与调整排程
-
-<img src="docs/images/tripwise/route.png" alt="按天展示的路线时间轴、停留时间、交通估算与地点操作" width="340">
-
-按天展示地点顺序、预计到达时间、停留与路程估算。用户可锁定地点、移出地点或按当前偏好重新生成；下方地图仅是示意图，并非真实导航。
-
-#### 行中助手｜记录实际进度
-
-<img src="docs/images/tripwise/journey.png" alt="行中助手显示当前停留点、下一站和进度操作" width="340">
-
-显示当前停留点与后续安排。用户可完成当前站，或打开「延长停留时间」填写预计偏差，再查看可能的路线调整。
-
-<img src="docs/images/tripwise/delay.png" alt="延长停留时间可快捷选取或用滑杆自定义时长" width="340">
-
-延长停留支持 15、30、60、90 分钟快捷选项，也可在 10–180 分钟内按 5 分钟调整。选定时长会带入后续 Plan B 的顺延说明。
-
-#### Plan B｜比较后再确认
-
-<img src="docs/images/tripwise/planb.png" alt="天气事件下比较保留顺延、相近替换和减少一站三种方案" width="340">
-
-切换模拟的降雨、人流或交通事件，比较「保留原地点 / 换相近体验 / 少去一站」的影响。方案先展示取舍，用户确认后才会应用到路线。
+截图中的地图、地点位置、时间与事件均为演示数据；历史路线刷新后重置。
 
 ### 原型边界
 
