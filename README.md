@@ -10,11 +10,11 @@
 
 [心境 MindMirror](docs/mindmirror-project.html) · [访研搭档 Research Copilot](docs/research.html) · [途序 Tripwise](docs/travel.html)
 
-GitHub Pages 展示三个项目入口。心境的公开页面包含项目介绍和沿用独立项目最新版设计的静态界面预览；实时 DeepSeek 对话与历史记录需要运行 [独立 Agent 仓库](https://github.com/YYYYskbfxx/MindMirror-Web-Agent)中的 Node 服务。访研搭档可在另行配置 Node 服务后调用模型；途序当前为规则驱动的交互原型。三个案例页均按功能配有界面截图与说明。
+GitHub Pages 展示三个项目入口。心境的公开页面包含项目介绍和沿用独立项目最新版设计的静态对话预览，打开后直接显示虚构多轮消息；实时 DeepSeek 对话与历史记录需要运行 [独立 Agent 仓库](https://github.com/YYYYskbfxx/MindMirror-Web-Agent)中的 Node 服务。访研搭档可在另行配置 Node 服务后调用模型；途序当前为规则驱动的交互原型。三个案例页均按功能配有界面截图与说明。
 
 ## 1. 心境 MindMirror
 
-[查看心境项目介绍](docs/mindmirror-project.html) · [查看独立 Agent 源码与运行说明](https://github.com/YYYYskbfxx/MindMirror-Web-Agent) · [查看最新版界面预览](docs/mindmirror.html)
+[查看心境项目介绍](docs/mindmirror-project.html) · [查看独立 Agent 源码与运行说明](https://github.com/YYYYskbfxx/MindMirror-Web-Agent) · [查看最新版对话界面](docs/mindmirror.html#session)
 
 ### 项目背景
 
