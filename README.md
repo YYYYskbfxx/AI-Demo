@@ -154,16 +154,18 @@ HOST=0.0.0.0
 - Node.js 内置 HTTP 服务，无生产依赖。
 - 可选 OpenAI 兼容接口；GitHub Pages 默认展示离线交互。
 - Render 部署时由同一个 Node 服务托管网页与模型代理接口。
-- 心境的练习内容不持久化；访研搭档的工作区保存在本机浏览器中；途序历史路线仅在当前页面会话保留。接入实时模型后，相关输入会发送至所配置的模型接口。
+- 早期离线心境页面不持久化练习内容；新版 [`mindmirror/`](mindmirror/) 服务在本机 `data/` 保存对话与日期记录，该目录不上传 GitHub。访研搭档的工作区保存在本机浏览器中；途序历史路线仅在当前页面会话保留。接入实时模型后，相关输入会发送至所配置的模型接口。
 
 ```text
 ai-builder-demos/
 ├── docs/
 │   ├── index.html       # 三个独立项目的入口
-│   ├── mindmirror.html  # 心境
+│   ├── mindmirror-project.html  # 心境项目介绍
+│   ├── mindmirror.html  # 心境早期离线交互稿
 │   ├── research.html    # 访研搭档
 │   └── travel.html      # 途序
-├── server.mjs           # 静态服务和可选模型代理
+├── mindmirror/          # 新版心境 Agent 源码与运行说明
+├── server.mjs           # 旧离线原型的静态服务和可选模型代理
 └── README.md
 ```
 
