@@ -19,7 +19,8 @@ function loadEnv() {
 
 const rules = {
   mindmirror: `你是“心境”，一个用于社交媒体使用反思的认知行为练习原型。不是治疗师，不诊断，不羞辱、不强迫戒断。保持温和、简短，每轮只问一个具体问题。目标依次是：回顾触发情境和情绪；识别当时自动想法；区分事实与推测、检查支持和反证；形成更平衡的想法；选择一个低门槛的下一步。不要替用户编造经历。用户提到自伤或即时危险时，先鼓励联系可信任的人和当地紧急支持，不继续常规练习。当前阶段：` ,
-  research: `你是“访研搭档”，帮助产品研究者整理访谈材料。只基于用户提供的原文，不补造受访者观点、背景或引用。将输出分为：1) 关键发现（每条包含原文证据）；2) 用户目标/痛点/行为线索；3) 仍待验证的假设；4) 后续追问建议。明确区分“受访者原话”和“分析推断”，如证据不足就写证据不足。不要输出可识别个人身份的信息。用中文简洁回答。`
+  research: `你是“访研搭档”，帮助产品研究者整理访谈材料。只基于用户提供的原文，不补造受访者观点、背景或引用。将输出分为：1) 关键发现（每条包含原文证据）；2) 用户目标/痛点/行为线索；3) 仍待验证的假设；4) 后续追问建议。明确区分“受访者原话”和“分析推断”，如证据不足就写证据不足。不要输出可识别个人身份的信息。用中文简洁回答。`,
+  researchChat: `你是用户研究工作台里的研究对话助手。围绕当前研究者选中的洞察和所给材料进行多轮讨论。严格区分原始记录、分析解释和待验证猜测；引用材料时使用给出的记录 ID，不编造参与者或数值。主观的“觉得不准确”不能写成实际数据错误。指出不同案例与证据不足处。产品机会仅作为候选方向，最终判断由研究者做。回答简洁、具体，不输出可识别个人信息。`
 };
 
 function localMindReply(step, input) {
@@ -65,17 +66,19 @@ async function callModel(messages) {
 }
 
 async function handleApi(req, res) {
-  if (req.method !== 'POST' || !['/api/mindmirror', '/api/research'].includes(req.url)) {
+  if (req.method !== 'POST' || !['/api/mindmirror', '/api/research', '/api/research-chat'].includes(req.url)) {
     res.writeHead(404); return res.end(JSON.stringify({ error: 'Not found' }));
   }
   let raw = '';
-  for await (const chunk of req) { raw += chunk; if (raw.length > 32_000) { res.writeHead(413); return res.end(JSON.stringify({ error: '内容过长' })); } }
+  for await (const chunk of req) { raw += chunk; if (raw.length > 64_000) { res.writeHead(413); return res.end(JSON.stringify({ error: '内容过长' })); } }
   let body;
   try { body = JSON.parse(raw); } catch { res.writeHead(400); return res.end(JSON.stringify({ error: '请求格式无效' })); }
   try {
     const live = Boolean(process.env.OPENAI_API_KEY);
     const safety = req.url === '/api/mindmirror' ? safetyReply(String(body.input || '')) : null;
-    const content = req.url === '/api/mindmirror'
+    const content = req.url === '/api/research-chat'
+      ? (await callModel([{ role: 'system', content: rules.researchChat }, { role: 'system', content: `当前洞察和可引用材料：${JSON.stringify({ insight: body.insight || null, records: body.records || [] }).slice(0, 24000)}` }, ...(Array.isArray(body.history) ? body.history.slice(-8).filter(m => ['user', 'assistant'].includes(m.role)).map(m => ({ role: m.role, content: String(m.content || '').slice(0, 2000) })) : []), { role: 'user', content: String(body.question || '').slice(0, 2000) }]) || '当前未配置模型。请在工作台使用离线引导。')
+      : req.url === '/api/mindmirror'
       ? (safety || await callModel(mindMessages(body)) || localMindReply(Number(body.step || 0), String(body.input || '')))
       : (await callModel([{ role: 'system', content: rules.research }, { role: 'user', content: String(body.input || '').slice(0, 24_000) }]) || localResearchReply(String(body.input || '')));
     res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' });
